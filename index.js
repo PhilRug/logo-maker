@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const {Square, Circle, Triangle} = require('./lib/shapes');
 
-inquirer.prompt([
+const questions = [
     {
         type: 'input',
         message: 'What 3 characters would you like to use for your logo?',
@@ -24,10 +24,7 @@ inquirer.prompt([
         message: 'What color would you like your shape to be?',
         name: 'shapecolor',
     }
-]).then(response => {
-    console.log(response);
-    writeToFile(response);
-})
+];
 
 class Logo {
     constructor() {
@@ -45,6 +42,31 @@ class Logo {
     }
 }
 
+function init() {
+    const input = inquirer.prompt(questions);
+        userText = input['text'];
+        userTextColor = input['textcolor'];
+        userShape = input['shape'];
+        userShapeColor = input['shapecolor'];
+        let shapeChoice = '';
+            if (userShape === 'Square') {
+                shapeChoice = new Square;
+            }
+            if (userShape === 'Triangle') {
+                shapeChoice = new Triangle;
+            }
+            if (userShape === 'Circle') {
+                shapeChoice = new Circle;
+            }
+        shapeChoice.setColor(userShapeColor);
 
+    const svg = new Svg();
+        svg.shapeEl(shapeChoice);
+        svg.textEl(text, textcolor);
+        finalImage = svg.render();
+    const svgName = 'logo.svg';
 
-fs.writeFile('logo.svg', logo, (err) => err ? console.error(error) : console.log("Success!"));
+fs.writeFile(svgName, finalImage, (err) => err ? console.error(error) : console.log("Success!"));
+}
+
+init();

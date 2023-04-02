@@ -27,6 +27,7 @@ testing is done with jest
 - shapes code: https://www.w3.org/TR/SVG2/shapes.html
 - triangle dimensions: https://www.w3schools.com/graphics/tryit.asp?filename=trysvg_polygon
 - text code: https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Getting_Started
+- questions code format came from my readme generator project https://github.com/PhilRug/readme-generator.git
     
 ## Questions
 If you have any questions you can contact me at:
