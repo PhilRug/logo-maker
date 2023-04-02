@@ -32,10 +32,10 @@ class Logo {
         this.shapeEl = '';        
     }
     render() {
-        return `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg"></svg>`
+        return `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">${this.shapeEl}${this.textEl}</svg>`
     }
     makeTextEl(text, color) {
-        this.textEl = `<text x="150" y="125" font-size="60" text-anchor="middle" fill=${color}>${text}</text>`
+        this.textEl = `<text x="150" y="125" font-size="60" text-anchor="middle" fill='${color}'>${text}</text>`
     }
     makeShapeEl(shape) {
         this.shapeEl = shape.render()
@@ -58,7 +58,7 @@ async function init() {
             else {
                 shapeChoice = new Circle();
             }
-            shapeChoice.makeShapeEl(userShapeColor);
+            shapeChoice.colorChoice(userShapeColor);
 
     const svg = new Logo();
     svg.makeShapeEl(shapeChoice);

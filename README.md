@@ -29,6 +29,8 @@ testing is done with jest
 - text code: https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Getting_Started
 - questions code format came from my readme generator project https://github.com/PhilRug/readme-generator.git
 - shoutout to David from askBCS for help with async/await
+- hex codes: https://www.color-hex.com/
+- jest code found: https://www.softwaretestinghelp.com/jest-testing-tutorial/
     
 ## Questions
 If you have any questions you can contact me at:

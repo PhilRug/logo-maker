@@ -1,5 +1,29 @@
 {
   "dependencies": {
     "inquirer": "^8.2.5"
-  }
+  },
+  "name": "logo-maker",
+  "description": "undefined\r ## Description\r With this app, you can create a simple custom  logo by answering a few questions.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PhilRug/logo-maker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PhilRug/logo-maker/issues"
+  },
+  "homepage": "https://github.com/PhilRug/logo-maker#readme"
 }
