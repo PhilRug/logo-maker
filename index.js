@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const Logo = require('./lib/shapes');
+const {Square, Circle, Triangle} = require('./lib/shapes');
 
 inquirer.prompt([
     {
@@ -29,12 +29,22 @@ inquirer.prompt([
     writeToFile(response);
 })
 
-function writeToFile({text, textcolor, shape, shapecolor}) {
-    const logo = 
-`
-`
+class Logo {
+    constructor() {
+        this.textEl = '';
+        this.shapeEl = '';        
+    }
+    render() {
+        return `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg"></svg>`
+    }
+    makeTextEl(text, color) {
+        this.textEl = `<text x="150" y="125" font-size="60" text-anchor="middle" fill=${color}>${text}</text>`
+    }
+    makeShapeEl(shape) {
+        this.shapeEl = shape.render()
+    }
+}
 
 
 
 fs.writeFile('logo.svg', logo, (err) => err ? console.error(error) : console.log("Success!"));
-}
