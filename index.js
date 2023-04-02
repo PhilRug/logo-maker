@@ -42,8 +42,8 @@ class Logo {
     }
 }
 
-function init() {
-    const input = inquirer.prompt(questions);
+async function init() {
+    const input = await inquirer.prompt(questions);
         userText = input['text'];
         userTextColor = input['textcolor'];
         userShape = input['shape'];
@@ -58,12 +58,12 @@ function init() {
             if (userShape === 'Circle') {
                 shapeChoice = new Circle;
             }
-        shapeChoice.setColor(userShapeColor);
+    shapeChoice.set(userShapeColor);
 
-    const svg = new Svg();
-        svg.shapeEl(shapeChoice);
-        svg.textEl(text, textcolor);
-        finalImage = svg.render();
+    const svg = new Logo();
+    svg.shapeEl.set(shapeChoice);
+    svg.textEl.set(text, textcolor);
+    finalImage = svg.render();
     const svgName = 'logo.svg';
 
 fs.writeFile(svgName, finalImage, (err) => err ? console.error(error) : console.log("Success!"));
