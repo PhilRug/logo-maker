@@ -50,19 +50,19 @@ async function init() {
         userShapeColor = input['shapecolor'];
         let shapeChoice = '';
             if (userShape === 'Square') {
-                shapeChoice = new Square;
+                shapeChoice = new Square();
             }
-            if (userShape === 'Triangle') {
-                shapeChoice = new Triangle;
+            else if (userShape === 'Triangle') {
+                shapeChoice = new Triangle();
             }
-            if (userShape === 'Circle') {
-                shapeChoice = new Circle;
+            else {
+                shapeChoice = new Circle();
             }
-    shapeChoice.set(userShapeColor);
+            shapeChoice.makeShapeEl(userShapeColor);
 
     const svg = new Logo();
-    svg.shapeEl.set(shapeChoice);
-    svg.textEl.set(text, textcolor);
+    svg.makeShapeEl(shapeChoice);
+    svg.makeTextEl(userText, userTextColor);
     finalImage = svg.render();
     const svgName = 'logo.svg';
 
