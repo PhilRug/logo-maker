@@ -20,7 +20,7 @@ With this app, you can create a simple custom  logo by answering a few questions
 ## Usage
 all you need to do it answer the questions prompted by your integrated terminal. you can start by right clicking the index.js file and select "open in integrated terminal", then type "node index.js".
 
-* video tutorial can be found at https://drive.google.com/file/d/1QNAz0QKwGVHCaQLcWfrS9xT-bs5TJUIx/view
+* video tutorial can be found at https://drive.google.com/file/d/1pVmYjp-s1JmJ2hd7ueM7cX4NY8ThvabO/view
     
 ## Testing
 testing is done with jest
